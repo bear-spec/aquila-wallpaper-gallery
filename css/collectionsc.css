@@ -1,0 +1,130 @@
+    * {
+        font-family: "Merriweather", serif;
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+
+    .nav-links {
+        display: flex;
+        column-gap: 40px;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+    }
+
+    .nav-links a:hover {
+        color: grey;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .side-nav {
+        background-color: black;
+        width: 50%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: -50%;
+        color: aliceblue;
+        transition: 2s;
+
+    }
+
+    .side-nav-links a {
+
+        text-decoration: none;
+        color: aliceblue;
+        padding-left: 15px;
+    }
+
+    .side-nav-link {
+        margin-bottom: 50px;
+    }
+
+    .footer{
+        margin-top: 20px;
+        background-color: aliceblue;
+        padding: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-cont {
+    text-align: center; 
+}
+
+.footer-icon {
+    margin-top: 10px; 
+}
+
+.footer-icon i {
+    margin: 0 10px; 
+    font-size: 24px; 
+    cursor: pointer; 
+}
+
+.product-sect{
+    margin-top:20px;
+}
+
+.product-search{
+    width: 60%;
+    display: flex;
+    border: solid aliceblue 3px;
+    border-radius: 15px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    margin:auto;
+}
+
+.product-search input{
+    border:none;
+    background-color: transparent;
+    width: 100%;
+    
+}
+
+.product-search input:focus{
+    outline: none;
+}
+
+.products{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: space-around;
+    gap:20px;
+}
+
+.product-box{
+    text-align:center;
+    flex-basis: 20%;
+}
+
+.product-box img{
+    border-radius: 10px;
+}
+
+    @media screen and (max-width:600px) {
+        .nav-toggle {
+            display: block;
+        }
+
+        .nav-links {
+            display: none;
+        }
+    }
