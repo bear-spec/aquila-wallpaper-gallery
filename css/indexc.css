@@ -29,6 +29,11 @@
         display: none;
     }
 
+   .nav-toggle:hover {
+    cursor: pointer;
+}
+
+
     .side-nav {
         background-color: black;
         width: 50%;
@@ -253,3 +258,4 @@
 
 
     }
+
