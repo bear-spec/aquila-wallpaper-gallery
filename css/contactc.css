@@ -1,7 +1,14 @@
 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: "Merriweather", serif;
     font-weight: 300;
     font-style: normal;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 .nav {
@@ -9,13 +16,17 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-                rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: rgba(50, 50, 93, 0.15) 0px 8px 20px -6px,
+                rgba(0, 0, 0, 0.2) 0px 6px 12px -6px;
 }
 
 .nav-links {
     display: flex;
-    column-gap: 40px;
+    gap: 40px;
 }
 
 .nav-links a {
@@ -35,29 +46,77 @@
 
 .side-nav {
     background-color: #000;
-    width: 50%;
-    height: 100%;
+    width: 70%;
+    height: 100vh;
     position: fixed;
     top: 0;
-    left: -50%;
+    left: -70%;
+    padding: 30px 20px;
     color: aliceblue;
-    transition: 0.4s ease;
+    transition: 0.35s ease;
+    z-index: 1500;
 }
 
 .side-nav-links a {
     text-decoration: none;
     color: aliceblue;
-    padding-left: 15px;
+    font-size: 18px;
 }
 
 .side-nav-link {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+}
+
+.product-sect {
+    margin-top: 20px;
+}
+
+.product-search {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid aliceblue;
+    border-radius: 14px;
+    padding: 8px 12px;
+    margin: 15px auto;
+}
+
+.product-search input {
+    border: none;
+    background: transparent;
+    width: 100%;
+    font-size: 15px;
+}
+
+.product-search input:focus {
+    outline: none;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.product-box {
+    flex: 0 1 22%;
+    text-align: center;
+}
+
+.product-box img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .footer {
-    margin-top: 20px;
+    margin-top: 30px;
     background-color: aliceblue;
-    padding: 30px;
+    padding: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,69 +132,23 @@
 
 .footer-icon i {
     margin: 0 10px;
-    font-size: 24px;
+    font-size: 22px;
     cursor: pointer;
-}
-
-.product-sect {
-    margin-top: 20px;
-}
-
-.product-search {
-    width: 60%;
-    display: flex;
-    border: solid aliceblue 3px;
-    border-radius: 15px;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px;
-    margin: auto;
-}
-
-.product-search input {
-    border: none;
-    background-color: transparent;
-    width: 100%;
-}
-
-.product-search input:focus {
-    outline: none;
-}
-
-.products {
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 20px;
-    justify-content: space-around;
-    gap: 20px;
-}
-
-.product-box {
-    text-align: center;
-    flex-basis: 20%;
-}
-
-.product-box img {
-    width: 100%;
-    border-radius: 10px;
 }
 
 .contact-page {
     max-width: 800px;
     margin: auto;
     padding: 40px 20px;
-    font-family: Arial, sans-serif;
 }
 
 .contact-intro {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .contact-intro h1 {
     font-size: 32px;
-    margin-bottom: 10px;
 }
 
 .contact-intro p {
@@ -189,7 +202,7 @@
 
 @media screen and (max-width: 900px) {
     .product-box {
-        flex-basis: 45%;
+        flex: 0 1 45%;
     }
 
     .product-search {
@@ -197,13 +210,14 @@
     }
 
     .nav-links {
-        column-gap: 20px;
+        gap: 20px;
     }
 }
 
 @media screen and (max-width: 600px) {
     .nav {
-        padding: 10px 15px;
+        padding: 6px 12px;
+        height: 56px;
     }
 
     .nav-toggle {
@@ -214,19 +228,8 @@
         display: none;
     }
 
-    .side-nav {
-        width: 70%;
-        left: -70%;
-    }
-
-    .side-nav-link {
-        margin-bottom: 30px;
-        font-size: 18px;
-    }
-
     .product-search {
         width: 90%;
-        padding: 8px 12px;
     }
 
     .products {
@@ -234,16 +237,15 @@
     }
 
     .product-box {
-        flex-basis: 100%;
+        flex: 0 1 48%;
     }
 
     .footer {
-        padding: 20px;
+        padding: 18px;
     }
 
     .footer-icon i {
         font-size: 20px;
-        margin: 0 8px;
     }
 
     .contact-page {
@@ -252,10 +254,6 @@
 
     .contact-intro h1 {
         font-size: 26px;
-    }
-
-    .contact-form {
-        padding: 20px;
     }
 
     .head-img,
