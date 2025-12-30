@@ -37,7 +37,7 @@
         top: 0;
         left: -50%;
         color: aliceblue;
-        transition: 2s;
+        transition: 1s;
 
     }
 
@@ -250,5 +250,6 @@
         .service-cont2 {
             flex-direction: column;
         }
+
 
     }
