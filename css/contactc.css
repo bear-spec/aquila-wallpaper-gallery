@@ -1,85 +1,87 @@
-    * {
-        font-family: "Merriweather", serif;
-        font-weight: 300;
-        font-style: normal;
-    }
+* {
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-style: normal;
+}
 
-    .nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    }
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+                rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
 
-    .nav-links {
-        display: flex;
-        column-gap: 40px;
-    }
+.nav-links {
+    display: flex;
+    column-gap: 40px;
+}
 
-    .nav-links a {
-        text-decoration: none;
-        color: rgb(0, 0, 0);
-    }
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+}
 
-    .nav-links a:hover {
-        color: grey;
-    }
+.nav-links a:hover {
+    color: grey;
+}
 
-    .nav-toggle {
-        display: none;
-    }
+.nav-toggle {
+    display: none;
+    font-size: 22px;
+    cursor: pointer;
+}
 
-    .side-nav {
-        background-color: black;
-        width: 50%;
-        height: 100%;
-        position: fixed;
-        top: 0;
-        left: -50%;
-        color: aliceblue;
-        transition: 2s;
+.side-nav {
+    background-color: #000;
+    width: 50%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -50%;
+    color: aliceblue;
+    transition: 0.4s ease;
+}
 
-    }
+.side-nav-links a {
+    text-decoration: none;
+    color: aliceblue;
+    padding-left: 15px;
+}
 
-    .side-nav-links a {
+.side-nav-link {
+    margin-bottom: 50px;
+}
 
-        text-decoration: none;
-        color: aliceblue;
-        padding-left: 15px;
-    }
+.footer {
+    margin-top: 20px;
+    background-color: aliceblue;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    .side-nav-link {
-        margin-bottom: 50px;
-    }
-
-    .footer{
-        margin-top: 20px;
-        background-color: aliceblue;
-        padding: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .footer-cont {
-    text-align: center; 
+.footer-cont {
+    text-align: center;
 }
 
 .footer-icon {
-    margin-top: 10px; 
+    margin-top: 10px;
 }
 
 .footer-icon i {
-    margin: 0 10px; 
-    font-size: 24px; 
-    cursor: pointer; 
+    margin: 0 10px;
+    font-size: 24px;
+    cursor: pointer;
 }
 
-.product-sect{
-    margin-top:20px;
+.product-sect {
+    margin-top: 20px;
 }
 
-.product-search{
+.product-search {
     width: 60%;
     display: flex;
     border: solid aliceblue 3px;
@@ -87,126 +89,181 @@
     justify-content: space-between;
     align-items: center;
     padding: 5px;
-    margin:auto;
+    margin: auto;
 }
 
-.product-search input{
-    border:none;
+.product-search input {
+    border: none;
     background-color: transparent;
     width: 100%;
-    
 }
 
-.product-search input:focus{
+.product-search input:focus {
     outline: none;
 }
 
-.products{
+.products {
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
     justify-content: space-around;
-    gap:20px;
+    gap: 20px;
 }
 
-.product-box{
-    text-align:center;
+.product-box {
+    text-align: center;
     flex-basis: 20%;
 }
 
+.product-box img {
+    width: 100%;
+    border-radius: 10px;
+}
+
 .contact-page {
-  max-width: 800px;
-  margin: auto;
-  padding: 40px 20px;
-  font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: auto;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
 }
 
 .contact-intro {
-  text-align: center;
-  margin-bottom: 40px;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 .contact-intro h1 {
-  font-size: 32px;
-  margin-bottom: 10px;
+    font-size: 32px;
+    margin-bottom: 10px;
 }
 
 .contact-intro p {
-  color: #555;
+    color: #555;
 }
 
 .contact-form {
-  background: #f9f9f9;
-  padding: 25px;
-  border-radius: 10px;
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 10px;
 }
 
 .form-group {
-  margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 .form-group label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
 .form-group input,
 .form-group textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
 }
 
 .contact-form button {
-  width: 100%;
-  padding: 12px;
-  background: #000;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
+    width: 100%;
+    padding: 12px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
 }
 
 .contact-form button:hover {
-  background: #333;
+    background: #333;
 }
 
 .contact-form small {
-  display: block;
-  text-align: center;
-  margin-top: 10px;
-  color: #777;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #777;
 }
 
-
-
-
-.product-box img{
-    border-radius: 10px;
-}
-
-    @media screen and (max-width:600px) {
-        .nav-toggle {
-            display: block;
-        }
-
-        .nav-links {
-            display: none;
-        }
-
-        .head-img {
-            display: none;
-        }
-
-        .service-cont1 {
-            display: none;
-        }
-
-        .service-cont2 {
-            flex-direction: column;
-        }
-
+@media screen and (max-width: 900px) {
+    .product-box {
+        flex-basis: 45%;
     }
+
+    .product-search {
+        width: 80%;
+    }
+
+    .nav-links {
+        column-gap: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .nav {
+        padding: 10px 15px;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .side-nav {
+        width: 70%;
+        left: -70%;
+    }
+
+    .side-nav-link {
+        margin-bottom: 30px;
+        font-size: 18px;
+    }
+
+    .product-search {
+        width: 90%;
+        padding: 8px 12px;
+    }
+
+    .products {
+        padding: 10px;
+    }
+
+    .product-box {
+        flex-basis: 100%;
+    }
+
+    .footer {
+        padding: 20px;
+    }
+
+    .footer-icon i {
+        font-size: 20px;
+        margin: 0 8px;
+    }
+
+    .contact-page {
+        padding: 20px 15px;
+    }
+
+    .contact-intro h1 {
+        font-size: 26px;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    .head-img,
+    .service-cont1 {
+        display: none;
+    }
+
+    .service-cont2 {
+        flex-direction: column;
+    }
+}
