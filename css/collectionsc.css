@@ -127,4 +127,17 @@
         .nav-links {
             display: none;
         }
+
+        .head-img {
+            display: none;
+        }
+
+        .service-cont1 {
+            display: none;
+        }
+
+        .service-cont2 {
+            flex-direction: column;
+        }
+
     }
