@@ -1,30 +1,31 @@
 function menushow() {
-        var sidenav = document.querySelector(".side-nav")
-        sidenav.style.left = "0"
+    document.querySelector(".side-nav").style.left = "0";
+}
 
-    }
+function menuhide() {
+    document.querySelector(".side-nav").style.left = "-70%";
+}
 
-    function menuhide() {
-        var sidenav = document.querySelector(".side-nav")
-        sidenav.style.left = "-50%"
-    }
-    function searchelmt(event){
-    var prodcont=document.getElementById("product")
-    var search=document.getElementById("search")
-    var prodlist=prodcont.querySelectorAll("div")
+function searchelmt(event) {
+    var prodcont = document.getElementById("product");
+    var enteredval = event.target.value.toUpperCase();
+    var prodlist = prodcont.querySelectorAll(".product-box");
 
-    var enteredval=event.target.value.toUpperCase()
+    for (var i = 0; i < prodlist.length; i++) {
+        var prodname = prodlist[i].querySelector("p").textContent.toUpperCase();
+        prodlist[i].style.display = prodname.includes(enteredval) ? "block" : "none";
+    }
+}
 
-    for(var count=0;count<prodlist.length;count=count+1)
-    {
-        var prodname=prodlist[count].querySelector("p").textContent
+document.addEventListener("click", function (e) {
+    var sidenav = document.querySelector(".side-nav");
+    var toggle = document.querySelector(".nav-toggle");
 
-        if(prodname.toUpperCase().indexOf(enteredval)<0)
-    {
-        prodlist[count].style.display="none"
+    if (
+        sidenav.style.left === "0px" &&
+        !sidenav.contains(e.target) &&
+        !toggle.contains(e.target)
+    ) {
+        sidenav.style.left = "-70%";
     }
-    else{
-        prodlist[count].style.display="block"
-    }
-    }
-    }
+});
